@@ -1,12 +1,20 @@
 import "./NavbarStyles.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { FaBars, FaTimes } from "react-icons/fa";
 const Navbar = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
+  // useEffect(() => {
+  //   const handleWindowResize = () => {
+  //     if (window.innerWidth > "1040") {
+  //       setClick(false);
+  //     }
+  //   };
 
+  //   window.addEventListener("resize", handleWindowResize);
+  // });
   const [color, setColor] = useState(false);
   const changeColor = () => {
     if (window.scrollY >= 100) {
